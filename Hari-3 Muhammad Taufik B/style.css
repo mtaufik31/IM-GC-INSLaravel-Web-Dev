@@ -1,0 +1,32 @@
+.navbar-brand {
+    font-size: 32px;
+    color: #38bdf8;
+}
+
+.container-fluid {
+        padding: 0 5rem;
+}
+
+.col-2 {
+    background-color: #d1d5db;
+}
+
+/* style.css */
+.logo {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Perbesar sedikit logo saat dihover */
+    opacity: 0.8; /* Kurangi sedikit opasitas saat dihover */
+}
+
+.card {
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1); /* Perbesar sedikit logo saat dihover */
+    opacity: 0.8;
+}
