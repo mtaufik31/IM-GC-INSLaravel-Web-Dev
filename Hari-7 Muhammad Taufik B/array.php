@@ -62,7 +62,7 @@
             "Name" => "Jim Hopper",
             "Age" => 43,
             "Aliases" => "Chief Hopper", 
-            "Status" =>  "Deceased",
+            "Status" =>  "Deceased  ",
         ],
         [
             "Name" => "Eleven",
