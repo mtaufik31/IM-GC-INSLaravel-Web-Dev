@@ -1,0 +1,64 @@
+--- FORMAT TUGAS ---
+
+
+// CARA MASUK MYSQL MENGGUNAKAN LARAGON
+di cmd masuk ke directory/folder laragon, habis tu pokoknya masuk aja nanti bentuk directorynya kayak gini (C:\laragon\bin\mysql\mysql-8.0.30-winx64>cd bin).
+kalo dah masuk bin terakhir ketik (mysql -u root -p).
+kalo udah gas ngoding mysql 😎
+
+
+
+1. BUAT DATABASE 
+    CREATE DATABASE myshop;
+
+2. BUAT TABLE DAN MASUKKAN TYPE NYA
+
+    A. CREATE TABLE users (
+    -> id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    -> name VARCHAR(255),
+    -> email VARCHAR(255),
+    -> password varchar(255));
+
+    B.  CREATE TABLE categories (
+    -> id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    -> name varchar(255));
+
+    C.  CREATE TABLE items (
+    -> id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price integer,
+    -> stock integer,
+    -> category_id integer,
+    -> FOREIGN KEY (category_id) REFERENCES categories(id));
+
+3. TAMBAHKAN DATA KE SETIAP TABLE YANG KALIAN BUAT
+
+    A. INSERT INTO users (name, email, password)
+    -> VALUES ("budijago", "taufikbudiman031@gmail.com", "1234#admin");
+
+    B.  INSERT INTO categories (name) 
+    -> VALUES ("gadget");
+
+    C.  INSERT INTO items (name, description, price, stock, category_id) VALUES 
+    -> ("Samung", "gacor hape", 123, 123, 1);
+
+4. NGAMBIL DATA
+
+    A. SELECT id, name, email FROM users;
+
+    B. - SELECT * FROM items
+        -> WHERE price > 1000000;
+
+       - SELECT * FROM items
+        -> WHERE name LIKE '%watch%';
+
+    C. SELECT items.name, items.description, categories.name AS category_name
+        FROM items
+        JOIN categories ON items.category_id = categories.id;
+
+
+5.  UPDATE items 
+    SET price = 2500000 
+    WHERE name = 'siomay';
+
